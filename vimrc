@@ -15,7 +15,7 @@ Bundle 'The-NERD-Commenter'
 Bundle 'cscope_plus.vim'
 Bundle 'vcscommand.vim'
 Bundle 'TaskList.vim'
-Bundle 'scrooloose/snipmate-snippets.git'
+Bundle 'snipMate'
 
 filetype plugin indent on
 
