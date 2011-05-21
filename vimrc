@@ -16,6 +16,7 @@ Bundle 'cscope_plus.vim'
 Bundle 'vcscommand.vim'
 Bundle 'TaskList.vim'
 Bundle 'snipMate'
+Bundle 'fugitive.vim'
 
 filetype plugin indent on
 
@@ -61,6 +62,9 @@ autocmd BufNewFile,BufRead *.html.erb set filetype=eruby.html
 " for cpp
 autocmd FileType cpp set softtabstop=4 shiftwidth=4 tabstop=4
 
+" for ruby
+autocmd FileType ruby set softtabstop=2 shiftwidth=2 tabstop=2
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -87,6 +91,8 @@ set winminheight=0          " Минимальная высота окна
 set winminwidth=0           " Минимальная ширина окна
 set laststatus=2            " Всегда показывать строку статуса
 set wildmenu                " Более удобное дополнение
+set wildmode=list:longest
+set wildcharm=<Tab>
 set showcmd                 " Показывать незавершённые команды в статусбаре
 set autoread                " После изменения файл сам перечитывается
 
@@ -201,8 +207,6 @@ imap        <C-V>   "+g " CTRL-V вставить под курсором
 "switching spelling
 setlocal spell spelllang=en,ru
 
-set wildmenu
-set wcm=<Tab>
 menu Spell.next ]s        " Move to next misspelled word 
 menu Spell.back [s        " Like ']s' but search backwards
 menu Spell.word_good zg   " Add word as a good word   

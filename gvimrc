@@ -11,7 +11,7 @@ set guioptions-=e
 
 set guifont=FreeMono\ 9
 
-au GUIEnter * : set lines=9999 columns=9999
+au GUIEnter * : set lines=999 columns=999
 
 colorscheme xoria256
 
