@@ -58,6 +58,11 @@ autocmd FileType tex set textwidth=78 foldmethod=marker tabstop=2 shiftwidth=2 s
 
 " for html.erb
 autocmd BufNewFile,BufRead *.html.erb set filetype=eruby.html
+autocmd FileType eruby.html set softtabstop=2 shiftwidth=2 tabstop=2
+
+" for css
+autocmd FileType css set softtabstop=2 shiftwidth=2 tabstop=2
+
 
 " for cpp
 autocmd FileType cpp set softtabstop=4 shiftwidth=4 tabstop=4
