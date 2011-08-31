@@ -5,7 +5,7 @@ let g:snips_author = 'Gennady Sazonov'
 set nocompatible            " Несовместимость с vi
 filetype off
 
-set rtp+=~/.vim/vundle.git/
+set rtp+=~/.vim/vundle/
 call vundle#rc()
 
 "My bundles:
