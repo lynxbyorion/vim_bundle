@@ -9,11 +9,12 @@ set guioptions+=c
 " Disable GUI tabs
 set guioptions-=e
 
-set guifont=FreeMono\ 9
+set guifont=Monaco\ 10
 
 au GUIEnter * : set lines=999 columns=999
 
-colorscheme xoria256
+set background=dark
+colorscheme solarized
 
 " Меню -->
     " По умолчанию меню скрыто

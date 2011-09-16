@@ -5,18 +5,26 @@ let g:snips_author = 'Gennady Sazonov'
 set nocompatible            " Несовместимость с vi
 filetype off
 
-set rtp+=~/.vim/vundle/
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'gmarik/vundle'
+
 "My bundles:
-Bundle 'OmniCppComplete'
-Bundle 'The-NERD-tree'
-Bundle 'The-NERD-Commenter'
-Bundle 'cscope_plus.vim'
-Bundle 'vcscommand.vim'
+Bundle 'Color-Sampler-Pack'
+Bundle 'wycats/nerdtree.git'
+Bundle 'scrooloose/nerdcommenter.git'
+Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'TaskList.vim'
 Bundle 'snipMate'
-Bundle 'fugitive.vim'
+Bundle 'pangloss/vim-javascript.git'
+Bundle 'tpope/vim-fugitive.git'
+Bundle 'tpope/vim-git.git'
+Bundle 'tpope/vim-haml.git'
+Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-markdown.git'
+Bundle 'tpope/vim-surround.git'
+Bundle 'scrooloose/syntastic.git'
 
 filetype plugin indent on
 
@@ -56,19 +64,8 @@ autocmd FileType make set noexpandtab tabstop=8 shiftwidth=8
 " for tex
 autocmd FileType tex set textwidth=78 foldmethod=marker tabstop=2 shiftwidth=2 softtabstop=2
 
-" for html.erb
-autocmd BufNewFile,BufRead *.html.erb set filetype=eruby.html
-autocmd FileType eruby.html set softtabstop=2 shiftwidth=2 tabstop=2
-
-" for css
-autocmd FileType css set softtabstop=2 shiftwidth=2 tabstop=2
-
-
 " for cpp
 autocmd FileType cpp set softtabstop=4 shiftwidth=4 tabstop=4
-
-" for ruby
-autocmd FileType ruby set softtabstop=2 shiftwidth=2 tabstop=2
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
