@@ -5,7 +5,7 @@ let g:snips_author = 'Gennady Sazonov'
 set nocompatible            " Несовместимость с vi
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
@@ -25,6 +25,7 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-markdown.git'
 Bundle 'tpope/vim-surround.git'
 Bundle 'scrooloose/syntastic.git'
+Bundle 'vim-scripts/OmniCppComplete.git'
 
 filetype plugin indent on
 
@@ -65,7 +66,7 @@ autocmd FileType make set noexpandtab tabstop=8 shiftwidth=8
 autocmd FileType tex set textwidth=78 foldmethod=marker tabstop=2 shiftwidth=2 softtabstop=2
 
 " for cpp
-autocmd FileType cpp set softtabstop=4 shiftwidth=4 tabstop=4
+autocmd FileType cpp set softtabstop=4 shiftwidth=4 tabstop=4 expandtab
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -150,6 +151,17 @@ set foldlevel=1             "                                                ""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set tags+=~/.vim/tags/qt4tags
+set tags+=~/.vim/tags/cpp
+
+" OmniCppComplete
+let OmniCpp_NamespaceSearch = 1
+let OmniCpp_GlobalScopeSearch = 1
+let OmniCpp_ShowAccess = 1
+let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
+let OmniCpp_MayCompleteDot = 1 " autocomplete after .
+let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
+let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
+let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
