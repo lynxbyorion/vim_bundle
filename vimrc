@@ -153,6 +153,9 @@ set foldlevel=1             "                                                ""
 set tags+=~/.vim/tags/qt4tags
 set tags+=~/.vim/tags/cpp
 
+" build tags of your own project with Ctrl-F12
+map <C-F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+
 " OmniCppComplete
 let OmniCpp_NamespaceSearch = 1
 let OmniCpp_GlobalScopeSearch = 1
