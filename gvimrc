@@ -1,6 +1,3 @@
-" Highlight the screen line of the cursor
-set cursorline
-
 """""""""""""""""" GUI options """"""""""""""""""""
 " Disable Toolbar
 set guioptions-=T
@@ -9,12 +6,14 @@ set guioptions+=c
 " Disable GUI tabs
 set guioptions-=e
 
-set guifont=Monaco\ 10
+set guifont=Bitstream\ Vera\ Sans\ Mono\ 9
 
 au GUIEnter * : set lines=999 columns=999
 
 set background=dark
-colorscheme solarized
+colorscheme neverland2
+
+let g:LatexBox_viewer="apvlv"
 
 " Меню -->
     " По умолчанию меню скрыто

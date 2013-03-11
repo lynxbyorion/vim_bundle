@@ -11,21 +11,24 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 "My bundles:
-Bundle 'Color-Sampler-Pack'
-Bundle 'wycats/nerdtree.git'
-Bundle 'scrooloose/nerdcommenter.git'
 Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'TaskList.vim'
 Bundle 'snipMate'
-Bundle 'pangloss/vim-javascript.git'
 Bundle 'tpope/vim-fugitive.git'
-Bundle 'tpope/vim-git.git'
-Bundle 'tpope/vim-haml.git'
-Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-markdown.git'
-Bundle 'tpope/vim-surround.git'
+Bundle 'scrooloose/nerdcommenter.git'
 Bundle 'scrooloose/syntastic.git'
-Bundle 'vim-scripts/OmniCppComplete.git'
+Bundle 'scrooloose/nerdtree.git'
+Bundle 'vcscommand.vim'
+Bundle 'LaTeX-Box'
+Bundle 'trapd00r/neverland-vim-theme.git'
+Bundle 'Marks-Browser'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle 'clang-complete'
+Bundle 'Sessions'
+Bundle 'Tagbar'
+Bundle 'a.vim'
 
 filetype plugin indent on
 
@@ -98,6 +101,7 @@ set wildmode=list:longest
 set wildcharm=<Tab>
 set showcmd                 " Показывать незавершённые команды в статусбаре
 set autoread                " После изменения файл сам перечитывается
+set cursorline              " Highlight the screen line of the cursor
 
 " Опции автодополнения - включаем только меню с доступеыми вариантами
 set completeopt=menu
