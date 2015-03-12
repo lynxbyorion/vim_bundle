@@ -11,7 +11,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 "My bundles:
-Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'TaskList.vim'
 Bundle 'snipMate'
 Bundle 'tpope/vim-fugitive.git'
@@ -20,15 +19,19 @@ Bundle 'scrooloose/nerdcommenter.git'
 Bundle 'scrooloose/syntastic.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'vcscommand.vim'
-Bundle 'LaTeX-Box'
-Bundle 'trapd00r/neverland-vim-theme.git'
+" Bundle 'LaTeX-Box'
 Bundle 'Marks-Browser'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
-Bundle 'clang-complete'
-Bundle 'Sessions'
 Bundle 'Tagbar'
 Bundle 'a.vim'
+Bundle 'Python-mode-klen'
+Bundle 'ScrollColors'
+Bundle 'ctrlp.vim'
+Bundle "bling/vim-airline"
+Bundle "flazz/vim-colorschemes"
+Bundle 'moll/vim-node'
+Plugin 'vim-pandoc'
 
 filetype plugin indent on
 
@@ -91,7 +94,7 @@ set mousehide               " Скрывать курсор мыши когда 
 
 "настройка цветовой схемы
 set t_Co=256                " поддержка 256 цветов в терминале ( необходимо TERM=xterm-256color)
-colorscheme xoria256         " Неплохие схемы: calmar256-dark, peaksea, lucius, wombat256 
+colorscheme nedit         " Неплохие схемы: calmar256-dark, peaksea, lucius, wombat256 
 
 set winminheight=0          " Минимальная высота окна
 set winminwidth=0           " Минимальная ширина окна
@@ -117,6 +120,7 @@ set listchars=tab:>-,trail:-                                ""
 
 set nobackup                " Отключить бэкапы
 set noswapfile              " Отключить свап файлы
+set nowritebackup
 
 set visualbell t_vb=        " Отключить пищалку
 set splitbelow              " Новое окно появляется внизу
@@ -209,6 +213,8 @@ map     <S-F4>  :cp<CR>zvzz:cc<CR>
  map     <F7>    :wall \| make<CR>
  map     <C-F7>  :wall \| make CFLAGS=-g<CR>
 
+nnoremap <silent> <F9> :TagbarToggle<CR>
+
 " f11 - обозреватель файлов (:Ex для стандартного обозревателя, плагин NERDTree -
 " дерево каталогов)
 map     <F11>   :NERDTreeToggle<cr>
@@ -279,3 +285,21 @@ if ('gui')
     source $MYGVIMRC
 endif
 
+" autocmd VIMEnter * :source ~/tmp/session.vim
+" autocmd VIMLeave * :mksession! ~/tmp/session.vim
+
+" airline
+if !exists("g:airline_symbols")
+    let g:airline_symbols = {}
+endif
+
+let g:airline_theme="wombat"
+let g:airline_powerline_fonts=1
+" let g:airline_section_warning = airline#section#create([ "syntastic" ])
+let g:airline#extensions#branch#empty_message  =  "No SCM"
+let g:airline#extensions#whitespace#enabled    =  0
+let g:airline#extensions#syntastic#enabled     =  1
+let g:airline#extensions#tabline#enabled       =  1
+let g:airline#extensions#tabline#tab_nr_type   =  1 " tab number
+let g:airline#extensions#tabline#fnamecollapse =  1 " /a/m/model.rb
+let g:airline#extensions#hunks#non_zero_only   =  1 " git gutter
